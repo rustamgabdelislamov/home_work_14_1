@@ -45,7 +45,7 @@ def fourth_product():
 
 
 @pytest.fixture
-def first_category(first_product,second_product):
+def first_category(first_product, second_product):
     return Category(
         name="Телефоны",
         description="Современные телефоны",
@@ -61,5 +61,3 @@ def second_category(third_product, fourth_product):
         description="Qled дисплеи",
         products=[third_product, fourth_product]
     )
-
-
