@@ -26,6 +26,7 @@ def create_obj_from_json(data):
 
 if __name__ == '__main__':
     raw_data = read_json('../data/products.json')
+    print(raw_data)
     category_data = create_obj_from_json(raw_data)
     print(category_data[0].name)
     print(category_data[0].products)
