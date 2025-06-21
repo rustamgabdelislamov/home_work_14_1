@@ -5,7 +5,6 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
-
     @property
     def price(self):
         return self.__price
@@ -29,8 +28,6 @@ class Product:
         else:
             self.__price = new_price
 
-
-
     @classmethod
     def new_product(cls, product_data, category):
         """Добавляет новый продукт и проверяет есть ли такой продукт в списке"""
@@ -45,10 +42,8 @@ class Product:
                     existing_product.quantity += quantity
                     existing_product.price = price  # Устанавливаем цену напрямую
                     return
-                    #Если мы нашли существующий продукт и обновили его количество и цену, выходим из метода.
+                    # Если мы нашли существующий продукт и обновили его количество и цену, выходим из метода.
                     # Здесь нет необходимости создавать новый продукт или добавлять его в категорию.
-
 
         new_product = Product(name, description, price, quantity)
         category.add_product(new_product)
-

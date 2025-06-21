@@ -1,10 +1,7 @@
-from itertools import product
-
 import pytest
 
-
 from src.product import Product
-from src.category import Category
+
 
 def test_product_init(first_product):
     """Тест инициализации продуктов"""
@@ -15,7 +12,7 @@ def test_product_init(first_product):
 
 
 def test_product_create():
-    new_product = Product('Samsung','тел',10000, 5)
+    new_product = Product('Samsung', 'тел', 10000, 5)
     new_product.name = 'Samsung'
     new_product.description = 'тел'
     new_product.price = 10000
@@ -46,7 +43,3 @@ def test_product_update_success(category):
     Product.new_product(product2, category)
 
     assert product1.price == 22000
-
-
-
-

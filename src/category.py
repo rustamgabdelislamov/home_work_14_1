@@ -5,7 +5,6 @@ class Category:
     category_count = 0
     products_count = 0
 
-
     def __init__(self, name, description, products):
         self.name = name
         self.description = description
@@ -34,21 +33,6 @@ class Category:
     def add_product(self, product: Product):
         self.__products_list.append(product)
 
-
     @property
     def product_in_list(self):
         return self.__products_list
-
-
-
-
-
-
-
-
-
-
-
-
-
-
