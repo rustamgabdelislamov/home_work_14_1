@@ -20,7 +20,7 @@ def test_product_create():
 
 
 def test_product_update_raise(first_product):
-    with pytest.raises(ValueError, match="Цена не может быть отрицательной"):
+    with pytest.raises(ValueError, match="Цена не может быть отрицательной или равной нулю"):
         first_product.price = -10
 
 

@@ -11,8 +11,8 @@ class Product:
 
     @price.setter
     def price(self, new_price):
-        if new_price < 0:
-            raise ValueError("Цена не может быть отрицательной")
+        if new_price <= 0:
+            raise ValueError("Цена не может быть отрицательной или равной нулю")
         if new_price < self.__price:
             while True:  # Запрашиваем подтверждение до тех пор, пока не получим корректный ввод
                 approval_input = input("Цена понижается!!! Снизить цену? (y - да, n - нет): ")
