@@ -61,3 +61,8 @@ def second_category(third_product, fourth_product):
         description="Qled дисплеи",
         products=[third_product, fourth_product]
     )
+
+
+@pytest.fixture
+def category():
+    return Category(name="Test Category", description="Description of Test Category", products=[])
