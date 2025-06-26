@@ -1,5 +1,6 @@
 from src.category import Category
 
+
 def test_category_init(first_category, second_category):
     """Тест инициализации категорий"""
     assert first_category.name == "Телефоны"
@@ -26,8 +27,3 @@ def test_category_products_list_setter(first_category, third_product):
 
 def test_str(first_category):
     assert str(first_category) == "Телефоны, количество продуктов: 2 шт."
-
-
-
-
-

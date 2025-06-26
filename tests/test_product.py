@@ -52,5 +52,3 @@ def test_str(first_product):
 def test_add(first_product, second_product):
     res = first_product + second_product
     assert res == 126000
-
-

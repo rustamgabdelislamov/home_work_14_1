@@ -15,7 +15,6 @@ class Category:
     def __str__(self):
         return f"{self.name}, количество продуктов: {len(self.__products_list)} шт."
 
-
     @property
     def products(self):
         return self.__products_list
@@ -29,12 +28,10 @@ class Category:
             products_quantity += product.quantity
         return f"{products_str}Общее количество товаров: {products_quantity}"
 
-
     def add_product(self, product: Product):
         if not isinstance(product, Product):
             raise TypeError("Можно добавлять только объекты класса Product")
         self.__products_list.append(product)
-
 
     @products_list.setter
     def products_list(self, new_product: Product):

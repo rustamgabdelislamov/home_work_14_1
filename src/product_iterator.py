@@ -11,7 +11,6 @@ class ProductIterator:
         self.index = 0
         return self
 
-
     def __next__(self):
         if self.index < len(self.category.products):
             product_ = self.category.products[self.index]
@@ -19,6 +18,7 @@ class ProductIterator:
             return product_
         else:
             raise StopIteration
+
 
 if __name__ == '__main__':
     product1 = Product('Samsung', 'тел', 10000, 5)
