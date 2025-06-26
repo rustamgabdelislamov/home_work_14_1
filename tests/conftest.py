@@ -2,6 +2,7 @@ import pytest
 
 from src.category import Category
 from src.product import Product
+from src.product_iterator import ProductIterator
 
 
 @pytest.fixture
@@ -66,3 +67,15 @@ def second_category(third_product, fourth_product):
 @pytest.fixture
 def category():
     return Category(name="Test Category", description="Description of Test Category", products=[])
+
+
+@pytest.fixture(autouse=True)
+def reset_product_count():
+    Category.products_count = 0  # Сбрасываем счетчик перед каждым тестом
+    yield
+    Category.products_count = 0  # Сбрасываем после теста (если необходимо)
+
+
+@pytest.fixture
+def product_iterator(first_category):
+    return ProductIterator(first_category)

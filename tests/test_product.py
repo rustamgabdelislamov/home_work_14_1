@@ -43,3 +43,14 @@ def test_product_update_success(category):
     Product.new_product(product2, category)
 
     assert product1.price == 22000
+
+
+def test_str(first_product):
+    assert str(first_product) == "Infinix, 12000 руб. Остаток: 5 шт."
+
+
+def test_add(first_product, second_product):
+    res = first_product + second_product
+    assert res == 126000
+
+

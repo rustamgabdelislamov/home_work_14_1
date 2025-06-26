@@ -18,8 +18,16 @@ def test_category_products_list_property(first_category):
 
 
 def test_category_products_list_setter(first_category, third_product):
-    assert len(first_category.products_list) == 2  # Проверяем начальное количество продуктов
-    # first_category.products_list = third_product  # Используем сеттер для добавления продукта
-    # assert len(first_category.products_list) == 3  # Проверяем новое количество продуктов
-    # assert Category.products_count == 3  # Проверяем общий счетчик продуктов
+    assert len(first_category.products) == 2  # Проверяем начальное количество продуктов
+    first_category.products_list = third_product  # Используем сеттер для добавления продукта
+    assert len(first_category.products) == 3  # Проверяем новое количество продуктов
+    assert Category.products_count == 3  # Проверяем общий счетчик продуктов
+
+
+def test_str(first_category):
+    assert str(first_category) == "Телефоны, количество продуктов: 2 шт."
+
+
+
+
 
