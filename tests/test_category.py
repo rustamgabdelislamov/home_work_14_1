@@ -15,7 +15,7 @@ def test_category_init(first_category, second_category):
 def test_category_products_list_property(first_category):
     assert first_category.products_list == ('Infinix, 12000 руб. Остаток: 5 шт.\n'
                                             'Samsung, 22000 руб. Остаток: 3 шт.\n'
-                                            'Общее количество товаров: 8')
+                                            )
 
 
 def test_category_products_list_setter(first_category, third_product):
@@ -26,4 +26,4 @@ def test_category_products_list_setter(first_category, third_product):
 
 
 def test_str(first_category):
-    assert str(first_category) == "Телефоны, количество продуктов: 2 шт."
+    assert str(first_category) == "Телефоны, количество продуктов: 8 шт."
