@@ -39,3 +39,4 @@ class Category:
         """сеттер, добавляющий в __products новый продукт с помощью метода add_product"""
         self.add_product(new_product)
         Category.products_count += 1
+
