@@ -14,6 +14,7 @@ def test_lawn_grace_init(lawn_grass1):
 def test_lawn_grace_add(lawn_grass1, lawn_grass2):
     assert lawn_grass1 + lawn_grass2 == 16750.0
 
+
 def test_lawn_grace_add_error(smartphone1, lawn_grass1):
     with pytest.raises(TypeError):
         return smartphone1 + lawn_grass1
