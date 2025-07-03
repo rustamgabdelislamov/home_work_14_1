@@ -37,6 +37,8 @@ class Category:
     @products_list.setter
     def products_list(self, new_product: Product):
         """сеттер, добавляющий в __products новый продукт с помощью метода add_product"""
+        if not isinstance(new_product, Product):
+            raise TypeError("Можно добавлять только объекты класса Product")
         self.add_product(new_product)
         Category.products_count += 1
 
