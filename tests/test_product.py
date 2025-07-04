@@ -1,6 +1,7 @@
 import pytest
 
 from src.product import Product
+from unittest.mock import Mock, patch
 
 
 def test_product_init(first_product):
@@ -52,3 +53,16 @@ def test_str(first_product):
 def test_add(first_product, second_product):
     res = first_product + second_product
     assert res == 126000
+
+@patch('builtins.input', return_value='y')
+def test_price_update(mock_input):
+    product = Product(name="Infinix", description="12GB", price=22000, quantity=5)
+    product.price = 12000  # Понижаем цену
+    assert product.price == 12000  # Проверяем, что цена изменилась корректно
+
+
+@patch('builtins.input', return_value='n')
+def test_price_update_no(mock_input):
+    product = Product(name="Infinix", description="12GB", price=22000, quantity=5)
+    product.price = 12000  # Понижаем цену
+    assert product.price == 22000  # Проверяем, что цена изменилась корректно
