@@ -1,6 +1,7 @@
 from src.base_product import BaseProduct
 from src.print_mixin import PrintMixin
 
+
 class Product(BaseProduct, PrintMixin):
     def __init__(self, name, description, price, quantity):
         self.name = name

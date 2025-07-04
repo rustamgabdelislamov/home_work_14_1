@@ -41,4 +41,3 @@ class Category:
             raise TypeError("Можно добавлять только объекты класса Product")
         self.add_product(new_product)
         Category.products_count += 1
-
