@@ -28,6 +28,3 @@ def test_empty_category_iterator(category):
 def test_iterator_return_type(product_iterator):
     product = next(product_iterator)
     assert isinstance(product, Product)
-
-
-
