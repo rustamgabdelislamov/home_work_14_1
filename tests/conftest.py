@@ -127,3 +127,11 @@ def lawn_grass2():
                      "США",
                      "5 дней",
                      "Темно-зеленый")
+
+@pytest.fixture
+def second_without_category():
+    return Category(
+        name="Телефоны",
+        description="Современные телефоны",
+        products=[]
+        )

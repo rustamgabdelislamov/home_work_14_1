@@ -33,4 +33,3 @@ def test_print_mixin(capsys):
               "Зеленый")
     message = capsys.readouterr()
     assert message.out.strip() == 'LawnGrass(Газонная трава, Элитная трава для газона, 500.0, 20)'
-

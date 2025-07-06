@@ -7,6 +7,8 @@ class Product(BaseProduct, PrintMixin):
         self.name = name
         self.description = description
         self.__price = price
+        if quantity == 0:
+            raise ValueError("Товар с нулевым количеством не может быть добавлен")
         self.quantity = quantity
         super().__init__()
 
@@ -66,4 +68,3 @@ if __name__ == '__main__':
     product1 = Product('Samsung', 'тел', 10000, 5)
     product2 = Product('Samsung', 'тел', 10000, 5)
     print(product1 + product2)
-

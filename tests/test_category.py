@@ -1,5 +1,7 @@
 from src.category import Category
-
+from src.exceptions import ZeroQuantityProduct
+from src.product import Product
+import pytest
 
 def test_category_init(first_category, second_category):
     """Тест инициализации категорий"""
@@ -27,3 +29,13 @@ def test_category_products_list_setter(first_category, third_product):
 
 def test_str(first_category):
     assert str(first_category) == "Телефоны, количество продуктов: 8 шт."
+
+
+def test_middle_price(first_category, second_without_category):
+    assert first_category.middle_price() == 17000.0
+    assert second_without_category.middle_price() == 0
+
+
+def test_add_zero_quantity_product_raises_exception():
+    with pytest.raises(ValueError, match="Товар с нулевым количеством не может быть добавлен"):
+        product = Product(name="Infinix", description="12GB", price=12000, quantity=0)
