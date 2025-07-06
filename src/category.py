@@ -1,6 +1,7 @@
 from src.product import Product
 from src.exceptions import ZeroQuantityProduct
 
+
 class Category:
     category_count = 0
     products_count = 0

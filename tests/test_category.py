@@ -1,7 +1,7 @@
 from src.category import Category
-from src.exceptions import ZeroQuantityProduct
 from src.product import Product
 import pytest
+
 
 def test_category_init(first_category, second_category):
     """Тест инициализации категорий"""

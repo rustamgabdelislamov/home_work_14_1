@@ -128,6 +128,7 @@ def lawn_grass2():
                      "5 дней",
                      "Темно-зеленый")
 
+
 @pytest.fixture
 def second_without_category():
     return Category(
