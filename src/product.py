@@ -66,3 +66,4 @@ if __name__ == '__main__':
     product1 = Product('Samsung', 'тел', 10000, 5)
     product2 = Product('Samsung', 'тел', 10000, 5)
     print(product1 + product2)
+
